@@ -353,9 +353,9 @@ function writeToCharacteristic(characteristic, data) {
 
 function stop() {
 	var stop_the_car = "Stop";
-	console.log("stop");
-	send(stop_the_car);
+	console.log(stop_the_car);
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(stop_the_car);
+	send(stop_the_car);
 }
 
 /*function connect() {
