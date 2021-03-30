@@ -2,7 +2,9 @@ body
 {
 
 }
-
+-webkit-appearance: button;
+-moz-appearance: button;
+appearance: button;
 #title
 {
     font-size: 40px;
