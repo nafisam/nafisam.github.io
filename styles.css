@@ -1,4 +1,3 @@
-@include experimental(appearance, none);
 body
 {
 
@@ -45,9 +44,6 @@ body
 
 .buttons
 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-   appearance: none;
   font-size: 30px;
   border-radius: 25px;
   width: 50%;
@@ -82,12 +78,6 @@ input[type="text"],input[type="password"]{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.ios-btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-   appearance: none;
-   border-radius: 0;
-}
 
 #loginButton{
     margin-top: 15px;
