@@ -157,7 +157,7 @@ class JoystickController
 					}
 				}
 
-				if ((yPercent > -0.4) && (yPercent < 0.4))
+				elif ((yPercent > -0.4) && (yPercent < 0.4))
 				{
 					if ((xPercent < -0.8) && (xPercent > -1.01))
 					{
@@ -166,6 +166,10 @@ class JoystickController
 					else {
 						self.directionParent = "Right";
 					}
+				}
+
+				else{
+					self.directionParent = "null";
 				}
 
 
@@ -347,6 +351,7 @@ function writeToCharacteristic(characteristic, data) {
 
 function stop() {
 	var stop_the_car = "Stop";
+	console.log("stop");
 	send(stop_the_car);
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(stop_the_car);
 }
