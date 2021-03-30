@@ -48,6 +48,9 @@ body
     border-radius: 25px;
     width: 50%;
     font-family: 'Ubuntu', sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+     appearance: none;
 }
 
 
@@ -78,10 +81,11 @@ input[type="text"],input[type="password"]{
     font-family: 'Ubuntu', sans-serif;
 }
 
-input {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
+.ios-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+   appearance: none;
+   border-radius: 0;
 }
 
 #loginButton{
