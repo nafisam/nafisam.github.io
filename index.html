@@ -205,7 +205,7 @@ let joystick1 = new JoystickController("stick1", 64, 8);
 function update()
 {
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.value);
-	document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
+	//document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
 }
 
 function loop()
@@ -253,16 +253,16 @@ function connect() {
 
 function disconnect() {
   if (deviceCache) {
-    log('Disconnecting from "' + deviceCache.name + '" bluetooth device...');
+    console.log('Disconnecting from "' + deviceCache.name + '" bluetooth device...');
     deviceCache.removeEventListener('gattserverdisconnected',
         handleDisconnection);
 
     if (deviceCache.gatt.connected) {
       deviceCache.gatt.disconnect();
-      log('"' + deviceCache.name + '" bluetooth device disconnected');
+      console.log('"' + deviceCache.name + '" bluetooth device disconnected');
     }
     else {
-      log('"' + deviceCache.name +
+      console.log('"' + deviceCache.name +
           '" bluetooth device is already disconnected');
     }
   }
