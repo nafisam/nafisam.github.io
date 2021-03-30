@@ -45,13 +45,13 @@ body
 
 .buttons
 {
-    font-size: 30px;
-    border-radius: 25px;
-    width: 50%;
-    font-family: 'Ubuntu', sans-serif;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-     appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+   appearance: none;
+  font-size: 30px;
+  border-radius: 25px;
+  width: 50%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 
