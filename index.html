@@ -11,7 +11,7 @@
 		font-size: 16px;
 		font-weight: bold;
 	}
-	.button {
+	.button_big {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -54,10 +54,10 @@ Parents Controller
 </div>
 
 <div style="position: fixed; width:200px; height:200px; left:730px; top:750px;">
-  <button type="button" name="stopButton" value="stop car">Stop Car</button>
+  <button id="stop" type="button">Stop Car</button>
 </div>
 
-<button class="button button5">Stop Car</button>
+<button class="button_big button5">Stop Car</button>
 
 
 
@@ -213,7 +213,7 @@ function loop()
 	requestAnimationFrame(loop);
 	update();
 }
-
+let stopButton = document.getElementById('stop');
 let connectButton = document.getElementById('connect');
 let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
@@ -225,7 +225,8 @@ connectButton.addEventListener('click', connect);
 // Disconnect from the device on Disconnect button click
 disconnectButton.addEventListener('click', disconnect);
 
-
+//stop the Car
+stopButton.addEventListener('click', stop);
 
 //disconnectButton.addEventListener('click', function() {
 //  disconnect();
@@ -342,6 +343,12 @@ function send(data) {
 
 function writeToCharacteristic(characteristic, data) {
   characteristic.writeValue(new TextEncoder().encode(data));
+}
+
+function stop() {
+	var stop_the_car = "Stop";
+	send(stop_the_car);
+	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(stop_the_car);
 }
 
 /*function connect() {
