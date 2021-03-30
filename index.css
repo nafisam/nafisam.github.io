@@ -1,7 +1,10 @@
-  /* Some elements have default margin/padding - layout issues if not reset */
+
+
+{  /* Some elements have default margin/padding - layout issues if not reset */
     margin: 0;
     padding: 0;
 }
+
 h1{
     font: bold 30px sans-serif;
     color: rgba(52, 94, 231, 0.8);
