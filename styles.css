@@ -78,6 +78,12 @@ input[type="text"],input[type="password"]{
     font-family: 'Ubuntu', sans-serif;
 }
 
+input {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
 #loginButton{
     margin-top: 15px;
     margin-bottom: 15px;
