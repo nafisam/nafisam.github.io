@@ -356,6 +356,7 @@ function writeToCharacteristic(characteristic, data) {
 
 function stop() {
 	var stop_the_car = "Stop";
+	joystick1.directionParent = "Car is Stopped";
 	console.log(stop_the_car);
 	document.getElementById("moving").innerText = "Car: " + JSON.stringify(stop_the_car);
 	send(stop_the_car);
