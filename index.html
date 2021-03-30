@@ -19,9 +19,37 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  left:730px; top:750px;
+  margin: 4px 2px;
   cursor: pointer;
 }
+
+.block{
+display: block;
+width: 100%;
+border: none;
+background-color: #4CAF50;
+color: white;
+padding: 14px 28px;
+font-size: 16px;
+cursor: pointer;
+text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .button1 {font-size: 10px;}
 .button2 {font-size: 12px;}
 .button3 {font-size: 16px;}
@@ -54,11 +82,15 @@ Parents Controller
 	</div>
 </div>
 
-<div style="position: fixed; width:100%; left:730px; top:750px;">
+<div class="center">
+	<button class="block" id="stop" type="button">Stop Car</button>
+</div>
+
+<!--<div style="position: fixed; width:100%; left:730px; top:750px;">
   <button id="stop" type="button">Stop Car</button>
 </div>
 
-<button class="button_big button5">Stop Car</button>
+<button class="button_big button5">Stop Car</button> -->
 
 
 
