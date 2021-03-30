@@ -157,7 +157,7 @@ class JoystickController
 					}
 				}
 
-				elif ((yPercent > -0.4) && (yPercent < 0.4))
+				if ((yPercent > -0.4) && (yPercent < 0.4))
 				{
 					if ((xPercent < -0.8) && (xPercent > -1.01))
 					{
@@ -168,7 +168,7 @@ class JoystickController
 					}
 				}
 
-				else
+				if ((yPercent == 0) && (xPercent == 0))
 				{
 					self.directionParent = "Nothing";
 				}
