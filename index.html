@@ -3,7 +3,6 @@
 
 <head>
 	<title>Parents Page</title>
-	<link rel="stylesheet" href="./style.css">
 	<style>
 
 	body
@@ -28,6 +27,12 @@
 .button3 {font-size: 16px;}
 .button4 {font-size: 20px;}
 .button5 {font-size: 25px;}
+
+#grad1 {
+  height: 200px;
+  background-color: khaki; /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(255,255,51), black);
+}
 	</style>
 </head>
 
@@ -40,7 +45,7 @@ Parents Controller
 <button id="connect" type="button">Connect</button>
 <button id="disconnect" type="button">Disconnect</button>
 <hr>
-
+<div id="grad1"></div>
 <div style="width: 90px; position: absolute; left:500px; top:150px;">
 	<img src="images/joystick-base-bigger.png"/>
 	<div id="stick1" style="position: absolute; width: 188px; left:150px; top:130px;">
