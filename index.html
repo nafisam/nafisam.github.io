@@ -413,6 +413,12 @@ return characteristic.startNotifications().
 		});
 }
 
+// Data receiving
+function handleCharacteristicValueChanged(event) {
+  let value = new TextDecoder().decode(event.target.value);
+  log(value, 'in');
+}
+
 function send(data) {
   data = String(data);
 
