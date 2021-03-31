@@ -361,6 +361,17 @@ function requestBluetoothDevice() {
       });
 }
 
+function handleDisconnection(event) {
+  let device = event.target;
+
+  log('"' + device.name +
+      '" bluetooth device disconnected, trying to reconnect...');
+
+  connectDeviceAndCacheCharacteristic(device).
+      then(characteristic => startNotifications(characteristic)).
+      catch(error => log(error));
+}
+
 // Connect to the device specified, get service and characteristic
 function connectDeviceAndCacheCharacteristic(device) {
   //
