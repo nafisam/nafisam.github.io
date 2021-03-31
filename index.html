@@ -303,7 +303,7 @@ disconnectButton.addEventListener('click', disconnect);
 //stop the Car
 stopButton.addEventListener('click', stop);
 
-startButton.addEventListener('click', start(device));
+startButton.addEventListener('click', start);
 
 //disconnectButton.addEventListener('click', function() {
 //  disconnect();
@@ -448,15 +448,15 @@ function stop() {
 	document.getElementById("moving").innerText = "Car: " + JSON.stringify(stop_the_car);
 	send(stop_the_car);
 }
-function start(device)
+function start()
 {
-	if(device.gatt.connected)
-	{
-		send("S")
-	}
-	else
+	if(!characteristicCache)
 	{
 		alert("Please connect to the Go Baby Go car");
+
+	else
+	{
+				send("S");
 	}
 }
 /*function connect() {
