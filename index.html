@@ -457,7 +457,9 @@ function start()
 	}
 	else
 	{
-				send("S");
+			var start_the_car = "Enabled";
+				send("N");
+				document.getElementById("moving").innerText = "Car: " + JSON.stringify(start_the_car);
 	}
 }
 /*function connect() {
