@@ -396,6 +396,7 @@ function connectDeviceAndCacheCharacteristic(device) {
       then(characteristic => {
         console.log('Characteristic found');
         characteristicCache = characteristic;
+				send("N");
 
         return characteristicCache;
       });
