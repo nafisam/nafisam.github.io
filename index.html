@@ -277,6 +277,7 @@ function update()
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
 	//document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
 		document.getElementById("moving").innerText = "Car: " + JSON.stringify(joystick1.directionParent);
+		send(joystick1.directionParent);
 
 }
 
@@ -369,7 +370,7 @@ function handleDisconnection(event) {
 
   connectDeviceAndCacheCharacteristic(device).
       then(characteristic => startNotifications(characteristic)).
-      catch(error => log(error));
+      catch(error => console.log(error));
 }
 
 // Connect to the device specified, get service and characteristic
@@ -400,7 +401,7 @@ function connectDeviceAndCacheCharacteristic(device) {
       });
 }
 
-// Enable the characteristic changes notification
+/*/ Enable the characteristic changes notification
 function startNotifications(characteristic) {
   //
 	console.log('Starting notifications...');
@@ -418,7 +419,7 @@ function handleCharacteristicValueChanged(event) {
   let value = new TextDecoder().decode(event.target.value);
   console.log(value, 'in');
 }
-
+*/
 function send(data) {
   data = String(data);
 	console.log(data);
@@ -462,7 +463,7 @@ function stop() {
   });
 }*/ //old connect that works
 
-send(joystick1.directionParent);
+
 loop();
 
 
