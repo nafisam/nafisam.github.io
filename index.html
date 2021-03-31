@@ -421,6 +421,7 @@ function handleCharacteristicValueChanged(event) {
 
 function send(data) {
   data = String(data);
+	console.log(data);
 
   if (!data || !characteristicCache) {
     return;
@@ -461,9 +462,9 @@ function stop() {
   });
 }*/ //old connect that works
 
-
-loop();
 send(joystick1.directionParent);
+loop();
+
 
 </script>
 
