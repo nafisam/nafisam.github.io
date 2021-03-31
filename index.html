@@ -112,6 +112,7 @@ Parents Controller
 </div> -->
 
 <div class="center">
+	<button class="block" id="start" type="button"> Start Car</button>
 	<button class="block" id="stop" type="button">Stop Car</button>
 	<button class="block" id="connect" type="button">Connect</button>
 	<button class="block" id="disconnect" type="button">Disconnect</button>
@@ -286,6 +287,7 @@ function loop()
 	requestAnimationFrame(loop);
 	update();
 }
+let startButton = document.getElementbyId('start');
 let stopButton = document.getElementById('stop');
 let connectButton = document.getElementById('connect');
 let disconnectButton = document.getElementById('disconnect');
@@ -300,6 +302,8 @@ disconnectButton.addEventListener('click', disconnect);
 
 //stop the Car
 stopButton.addEventListener('click', stop);
+
+startButton.addEventListener('click', start);
 
 //disconnectButton.addEventListener('click', function() {
 //  disconnect();
@@ -396,7 +400,7 @@ function connectDeviceAndCacheCharacteristic(device) {
       then(characteristic => {
         console.log('Characteristic found');
         characteristicCache = characteristic;
-				send("N");
+
 
         return characteristicCache;
       });
@@ -444,7 +448,17 @@ function stop() {
 	document.getElementById("moving").innerText = "Car: " + JSON.stringify(stop_the_car);
 	send(stop_the_car);
 }
-
+function start()
+{
+	if(device.gatt.connected)
+	{
+		send("S")
+	}
+	else
+	{
+		alert("Please connect to the Go Baby Go car");
+	}
+}
 /*function connect() {
  let options = {};
  options.acceptAllDevices = true;
