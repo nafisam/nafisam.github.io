@@ -321,7 +321,7 @@ function connect() {
       requestBluetoothDevice()).
       then(device => connectDeviceAndCacheCharacteristic(device)).
       then(characteristic => startNotifications(characteristic)).
-      catch(error => log(error));
+      catch(error => console.log(error));
 }
 
 function disconnect() {
