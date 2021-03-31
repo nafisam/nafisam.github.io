@@ -303,7 +303,7 @@ disconnectButton.addEventListener('click', disconnect);
 //stop the Car
 stopButton.addEventListener('click', stop);
 
-startButton.addEventListener('click', start);
+startButton.addEventListener('click', start(device));
 
 //disconnectButton.addEventListener('click', function() {
 //  disconnect();
@@ -448,7 +448,7 @@ function stop() {
 	document.getElementById("moving").innerText = "Car: " + JSON.stringify(stop_the_car);
 	send(stop_the_car);
 }
-function start()
+function start(device)
 {
 	if(device.gatt.connected)
 	{
