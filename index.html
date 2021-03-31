@@ -456,13 +456,12 @@ function start()
 	if(!characteristicCache)
 	{
 		alert("Please connect to the Go Baby Go car");
-		return;
 	}
 	else
 	{
 				joystick1.directionParent = "N";
 				send("N");
-				document.getElementById("moving").innerText = "Car: Connected";
+				document.getElementById("moving").innerText = "Car: " + JSON.stringify(joystick1.directionParent);
 	}
 }
 /*function connect() {
