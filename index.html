@@ -211,14 +211,42 @@ class JoystickController
 		    const xPercent = parseFloat((xPosition2 / maxDistance).toFixed(4));
 		    const yPercent = parseFloat((yPosition2 / maxDistance).toFixed(4));
 
-				if ((xPercent > -0.4) && (xPercent < 0.4))
+
+				if ((xPercent > -0.2) && (xPercent < 0.2))
 				{
 					if ((yPercent < -0.8) && (yPercent > -1.01))
 					{
 						self.directionParent = "F";
 					}
-					else {
+					else if ((yPercent > 0.8) && (yPercent < 1.01))
+					{
 						self.directionParent = "B";
+					}
+				}
+
+
+				if((yPercent > -0.55) && (yPercent < -0.69))
+				{
+					if ((xPercent > -0.85) && (xPercent < -0.75))
+					{
+						self.directionParent = "F";
+						self.directionParent = "L";
+					}
+					else if((xPercent > 0.75) && (xPercent < 0.85))
+					{
+						self.directionParent = "F";
+						self.directionParent = "R";
+					}
+				}
+
+				if ((yPercent > -0.2) && (yPercent < 0.2))
+				{
+					if ((xPercent < -0.8) && (xPercent > -1.01))
+					{
+						self.directionParent = "L";
+					}
+					else {
+						self.directionParent = "R";
 					}
 				}
 
