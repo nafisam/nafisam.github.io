@@ -217,10 +217,12 @@ class JoystickController
 					if ((yPercent < -0.8) && (yPercent > -1.01))
 					{
 						self.directionParent = "F";
+						send(joystick1.directionParent);
 					}
 					else if ((yPercent > 0.8) && (yPercent < 1.01))
 					{
 						self.directionParent = "B";
+						send(joystick1.directionParent);
 					}
 				}
 
@@ -230,12 +232,16 @@ class JoystickController
 					if ((xPercent > -0.85) && (xPercent < -0.75))
 					{
 						self.directionParent = "F";
+						send(joystick1.directionParent);
 						self.directionParent = "L";
+						send(joystick1.directionParent);
 					}
 					else if((xPercent > 0.75) && (xPercent < 0.85))
 					{
 						self.directionParent = "F";
+						send(joystick1.directionParent);
 						self.directionParent = "R";
+						send(joystick1.directionParent);
 					}
 				}
 
@@ -244,9 +250,11 @@ class JoystickController
 					if ((xPercent < -0.8) && (xPercent > -1.01))
 					{
 						self.directionParent = "L";
+						send(joystick1.directionParent);
 					}
 					else {
 						self.directionParent = "R";
+						send(joystick1.directionParent);
 					}
 				}
 
@@ -255,15 +263,18 @@ class JoystickController
 					if ((xPercent < -0.8) && (xPercent > -1.01))
 					{
 						self.directionParent = "L";
+						send(joystick1.directionParent);
 					}
 					else {
 						self.directionParent = "R";
+						send(joystick1.directionParent);
 					}
 				}
 
 				if ((yPercent == 0) && (xPercent == 0))
 				{
 					self.directionParent = "0";
+					send(joystick1.directionParent);
 				}
 
 
@@ -306,7 +317,7 @@ function update()
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
 	//document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
 		document.getElementById("moving").innerText = "Car: " + JSON.stringify(joystick1.directionParent);
-		send(joystick1.directionParent);
+
 
 }
 
