@@ -377,6 +377,7 @@ function disconnect() {
     if (deviceCache.gatt.connected) {
       deviceCache.gatt.disconnect();
       console.log('"' + deviceCache.name + '" bluetooth device disconnected');
+			alert("Go Baby Go Car Disconnected");
     }
     else {
       console.log('"' + deviceCache.name +
