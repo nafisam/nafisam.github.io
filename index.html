@@ -317,7 +317,7 @@ function update()
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
 	//document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
 		document.getElementById("moving").innerText = "Car: " + JSON.stringify(joystick1.directionParent);
-
+		send(joystick1.directionParent);
 
 }
 
