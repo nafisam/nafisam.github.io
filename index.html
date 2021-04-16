@@ -342,7 +342,7 @@ class JoystickController
 let joystick1 = new JoystickController("stick1", 64, 8);
 //let joystick2 = new JoystickController("stick2", 64, 8);
 class staticVariable {
-			static lastSent = 0;
+			static lastSend = 0;
 }
 
 function update()
@@ -361,9 +361,12 @@ function update()
 		// }, delayInMilliseconds);
 
 		var date = Date.now();
+		console.log("right before if statement")
+		console.log(date);
+		console.log(staticVariable.lastSend);
 		if(staticVariable.lastSend <= date)
 		{
-			lastSend = date + 250;
+			staticVariable.lastSend = date + 250;
 			if(joystick1.directionParent != "0"){
 			send(joystick1.directionParent);
 			console.log("Sent Value");
