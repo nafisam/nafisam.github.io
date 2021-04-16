@@ -217,16 +217,16 @@ class JoystickController
 					if ((yPercent < -0.9) && (yPercent > -1.01))
 					{
 						self.directionParent = "F";
-						send(joystick1.directionParent);
+					//	send(joystick1.directionParent);
 					}
 					else if ((yPercent > 0.88) && (yPercent < 1.01))
 					{
 						self.directionParent = "B";
-						send(joystick1.directionParent);
+					//	send(joystick1.directionParent);
 					}
 				}
 
-				if((yPercent < -0.6) && (yPercent > -0.85))
+			/*	if((yPercent < -0.6) && (yPercent > -0.85))
 				{
 						if((xPercent > -0.8 ) && (xPercent < -0.5))
 						{
@@ -242,7 +242,7 @@ class JoystickController
 							self.directionParent = "R";
 							send(joystick1.directionParent);
 						}
-				}
+				}*/
 
 				/*if((yPercent > -0.55) && (yPercent < -0.69))
 				{
@@ -292,12 +292,12 @@ class JoystickController
 					if((xPercent < -0.89) && (xPercent > -1.01))
 					{
 						self.directionParent = "L";
-						send(joystick1.directionParent);
+						//send(joystick1.directionParent);
 					}
 					else if ((xPercent > 0.89) && (xPercent < 1.01))
 					{
 						self.directionParent = "R";
-						send(joystick1.directionParent);
+					//	send(joystick1.directionParent);
 					}
 				}
 
