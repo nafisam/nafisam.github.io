@@ -341,6 +341,9 @@ class JoystickController
 
 let joystick1 = new JoystickController("stick1", 64, 8);
 //let joystick2 = new JoystickController("stick2", 64, 8);
+class staticVariable {
+			static lastSent = 0;
+}
 
 function update()
 {
@@ -356,9 +359,9 @@ function update()
 		// 		send(joystick1.directionParent);
 		// 	}
 		// }, delayInMilliseconds);
-		static lastSent = 0
+
 		var date = DateTime.Now();
-		if(lastSend <= date)
+		if(staticVariable.lastSend <= date)
 		{
 			lastSend = date + 250;
 			if(joystick1.directionParent != "0"){
