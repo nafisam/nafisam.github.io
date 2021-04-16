@@ -366,7 +366,7 @@ function update()
 		console.log(staticVariable.lastSend);
 		if(staticVariable.lastSend <= date)
 		{
-			staticVariable.lastSend = date + 250;
+			staticVariable.lastSend = date + 100;
 			if(joystick1.directionParent != "0"){
 			send(joystick1.directionParent);
 			console.log("Sent Value");
