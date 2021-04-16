@@ -211,7 +211,7 @@ class JoystickController
 		    const xPercent = parseFloat((xPosition2 / maxDistance).toFixed(4));
 		    const yPercent = parseFloat((yPosition2 / maxDistance).toFixed(4));
 
-
+				self.directionParent = "0";
 				if ((xPercent > -0.2) && (xPercent < 0.2))
 				{
 					if ((yPercent < -0.9) && (yPercent > -1.01))
@@ -219,15 +219,32 @@ class JoystickController
 						self.directionParent = "F";
 						send(joystick1.directionParent);
 					}
-					else if ((yPercent > 0.8) && (yPercent < 1.01))
+					else if ((yPercent > 0.88) && (yPercent < 1.01))
 					{
 						self.directionParent = "B";
 						send(joystick1.directionParent);
 					}
 				}
 
+				if((yPercent < -0.6) && (yPercent > -0.78))
+				{
+						if((xPercent > -0.8 ) && (xPercent < -0.5))
+						{
+							self.directionParent = "F";
+							send(joystick1.directionParent);
+							self.directionParent = "L";
+							send(joystick1.directionParent);
+						}
+						else if((xPercent < 0.8 ) && (xPercent > 0.5))
+						{
+							self.directionParent = "F";
+							send(joystick1.directionParent);
+							self.directionParent = "R";
+							send(joystick1.directionParent);
+						}
+				}
 
-				if((yPercent > -0.55) && (yPercent < -0.69))
+				/*if((yPercent > -0.55) && (yPercent < -0.69))
 				{
 					if ((xPercent > -0.85) && (xPercent < -0.75))
 					{
@@ -243,9 +260,9 @@ class JoystickController
 						self.directionParent = "R";
 						send(joystick1.directionParent);
 					}
-				}
+				}*/
 
-				if ((yPercent > -0.2) && (yPercent < 0.2))
+		/*		if ((yPercent > -0.2) && (yPercent < 0.2))
 				{
 					if ((xPercent < -0.8) && (xPercent > -1.01))
 					{
@@ -267,6 +284,19 @@ class JoystickController
 					}
 					else {
 						self.directionParent = "R";
+						send(joystick1.directionParent);
+					}
+				}*/
+				if((yPercent < 0.2) && (yPercent > -0.2))
+				{
+					if((xPercent < -0.94) && (xPercent > -0.96))
+					{
+						self.directionParent = "L";
+						send(joystick1.directionParent);
+					}
+					else if ((xPercent > 0.94) && (xPercent < 0.96))
+					{
+						self.directionParent = "L";
 						send(joystick1.directionParent);
 					}
 				}
