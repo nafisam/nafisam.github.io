@@ -361,14 +361,14 @@ function update()
 		// 		send(joystick1.directionParent);
 		// 	}
 		// }, delayInMilliseconds);
-
+*/
 		var date = Date.now();
 		console.log("right before if statement")
 		console.log(date);
-		console.log(staticVariable.lastSend);
-		if(staticVariable.lastSend <= date)
+		console.log(lastSend);
+		if(lastSend <= date)
 		{
-			staticVariable.lastSend = date + 160;
+			lastSend = date + 160;
 			if(joystick1.directionParent != "0"){
 			send(joystick1.directionParent);
 			console.log("Sent Value");
