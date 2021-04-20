@@ -344,6 +344,8 @@ let joystick1 = new JoystickController("stick1", 64, 8);
 //let joystick2 = new JoystickController("stick2", 64, 8);
 //lastSend = 0;
 
+var lastSend=0;
+
 function update()
 {
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
