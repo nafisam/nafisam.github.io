@@ -304,7 +304,7 @@ class JoystickController
 				if ((yPercent == 0) && (xPercent == 0))
 				{
 					self.directionParent = "0";
-					//send(joystick1.directionParent);
+					send(joystick1.directionParent);
 				}
 
 
@@ -350,6 +350,7 @@ function update()
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
 	//document.getElementById("status2").innerText = "Joystick 2: " + JSON.stringify(joystick2.value);
 		document.getElementById("moving").innerText = "Car: " + JSON.stringify(joystick1.directionParent);
+<<<<<<< HEAD
 	/*	var delayInMilliseconds = 1000; //1 second
 
 		// setTimeout(function() {
@@ -372,6 +373,9 @@ function update()
 			console.log("Sent Value");
 		}
 	}*/
+=======
+		send(joystick1.directionParent);
+>>>>>>> parent of a4b787b (Update index.html)
 
 }
 
