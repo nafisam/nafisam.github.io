@@ -79,6 +79,17 @@ span.b {
   transform: translate(-50%, -50%);
 }
 
+.outPopUp {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;
+}
+
 .center_two {
  display: flex;
   justify-content: center;
@@ -145,7 +156,7 @@ Parents Controller
 	<button class="block" id="disconnect" type="button">Disconnect</button>
 </div> -->
 
-<div style="width: 128px">
+<div style="width: 128px; margin:0 auto;">
 <img src="images/joystick-base.png"/>
 <div id="stick1" style="position: absolute; left:32px; top:68px;">
 <img src="images/joystick-red.png"/>
