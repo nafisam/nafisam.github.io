@@ -128,6 +128,9 @@ Parents Controller
 
 <script>
 //var directionParent;
+class staticVariable {
+			static lastSend = 0;
+}
 class JoystickController
 {
 	// stickID: ID of HTML element (representing joystick) that will be dragged
@@ -341,9 +344,7 @@ class JoystickController
 
 let joystick1 = new JoystickController("stick1", 64, 8);
 //let joystick2 = new JoystickController("stick2", 64, 8);
-class staticVariable {
-			static lastSend = 0;
-}
+
 
 function update()
 {
