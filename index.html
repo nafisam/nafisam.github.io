@@ -553,6 +553,7 @@ function connectDeviceAndCacheCharacteristic(device) {
       then(characteristic => {
         console.log('Characteristic found');
 				alert("Bluetooth Connected");
+				document.getElementById("moving").innerText = "Car: Connected";
         characteristicCache = characteristic;
 
 				//send("N");
