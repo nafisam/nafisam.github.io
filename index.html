@@ -111,12 +111,21 @@ Parents Controller
 	</div>
 </div> -->
 
-<div class="center">
+<!--<div class="center">
 	<button class="block" id="start" type="button"> Start Car</button>
 	<button class="block" id="stop" type="button">Stop Car</button>
 	<button class="block" id="connect" type="button">Connect</button>
 	<button class="block" id="disconnect" type="button">Disconnect</button>
-</div>
+</div> -->
+
+<div id ="bigBox">
+		<div id="promptDiv">
+			<!--<button type = "button" id="promptButton" class="buttons" onclick="parentpage();">Parent</button><br>
+			<button type = "button" id="promptButton" class="buttons" onclick="childpage();">Child</button><br> -->
+			<button type="button" id="connect" class="buttons" >Connect</button><br>
+			<button type="button" id="disconnect" class="buttons">Disconnect</button><br>
+		</div>
+	</div>
 
 <!--<div style="position: fixed; width:100%; left:730px; top:750px;">
   <button id="stop" type="button">Stop Car</button>
@@ -305,7 +314,7 @@ class JoystickController
 				if ((yPercent == 0) && (xPercent == 0))
 				{
 					self.directionParent = "0";
-					//send(joystick1.directionParent);
+					send(joystick1.directionParent);
 				}
 
 
