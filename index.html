@@ -341,10 +341,10 @@ class JoystickController
 
 let joystick1 = new JoystickController("stick1", 64, 8);
 //let joystick2 = new JoystickController("stick2", 64, 8);
-class staticVariable () {
+/*class staticVariable () {
 			static lastSend = 0;
 }
-
+*/
 function update()
 {
 	document.getElementById("status1").innerText = "Joystick 1: " + JSON.stringify(joystick1.directionParent) + JSON.stringify(joystick1.value);
